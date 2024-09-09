@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy NGINX to F5 Distributed Cloud</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555555;
+        }
+
+        input[type="text"],
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Deploy NGINX to F5 Distributed Cloud</h1>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="tenant_url">Tenant URL:</label>
+                <input type="text" id="tenant_url" name="tenant_url" value="https://customer.console.ves.volterra.io"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="namespace">Namespace:</label>
+                <input type="text" id="namespace" name="namespace" required>
+            </div>
+
+            <div class="form-group">
+                <label for="api_token">API Token:</label>
+                <input type="text" id="api_token" name="api_token" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
